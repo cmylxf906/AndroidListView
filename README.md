@@ -27,6 +27,9 @@ public class Animal {
 AnimalAdapter.java
 
 
+
+
+
 public class AnimalAdapter extends ArrayAdapter<Animal> {
     private  int resourceId;
     public  AnimalAdapter(Context context,
@@ -35,8 +38,7 @@ public class AnimalAdapter extends ArrayAdapter<Animal> {
         super(context,textViewResourceId,object);
         resourceId = textViewResourceId;
     }
-
-    public View getView(int position, View coverView, ViewGroup parent){
+public View getView(int position, View coverView, ViewGroup parent){
         Animal animal = getItem(position);
         View view = LayoutInflater.from(getContext()).inflate(resourceId,parent,false);
         ImageView animalImage = (ImageView) view.findViewById(R.id.animal_view);
@@ -50,6 +52,10 @@ public class AnimalAdapter extends ArrayAdapter<Animal> {
 
 
 MainAactivity.java
+    
+    
+    
+    
 
 public class MainActivity extends AppCompatActivity {
     private List<Animal> animalList = new ArrayList<>();
@@ -73,7 +79,7 @@ public class MainActivity extends AppCompatActivity {
         });
 
     }
-    private void initAnimals(){
+private void initAnimals(){
         for (int i=0;i<1;i++){
             Animal Lion = new Animal("Lion",R.drawable.lion);
             animalList.add(Lion);
@@ -111,6 +117,12 @@ activity_main.xml
 
 
 anmimal_item.xml
+    
+    
+    
+    
+    
+    
 
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
