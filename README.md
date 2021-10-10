@@ -30,15 +30,15 @@ AnimalAdapter.java
 
 
 
-public class AnimalAdapter extends ArrayAdapter<Animal> {
-    private  int resourceId;
-    public  AnimalAdapter(Context context,
+    public class AnimalAdapter extends ArrayAdapter<Animal> {
+         private  int resourceId;
+        public  AnimalAdapter(Context context,
                           int textViewResourceId,
                           List<Animal> object){
         super(context,textViewResourceId,object);
         resourceId = textViewResourceId;
     }
-public View getView(int position, View coverView, ViewGroup parent){
+        public View getView(int position, View coverView, ViewGroup parent){
         Animal animal = getItem(position);
         View view = LayoutInflater.from(getContext()).inflate(resourceId,parent,false);
         ImageView animalImage = (ImageView) view.findViewById(R.id.animal_view);
@@ -57,7 +57,7 @@ MainAactivity.java
     
     
 
-public class MainActivity extends AppCompatActivity {
+    public class MainActivity extends AppCompatActivity {
     private List<Animal> animalList = new ArrayList<>();
     private String[] data ={"Lion","Tiger","Monkey","Dog","Cat","Elephant"};
     @Override
@@ -79,7 +79,7 @@ public class MainActivity extends AppCompatActivity {
         });
 
     }
-private void initAnimals(){
+        private void initAnimals(){
         for (int i=0;i<1;i++){
             Animal Lion = new Animal("Lion",R.drawable.lion);
             animalList.add(Lion);
