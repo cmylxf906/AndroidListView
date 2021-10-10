@@ -2,9 +2,9 @@
 
 代码如下：
 Animal.java
-package com.example.pro3;
 
-public class Animal {
+
+    public class Animal {
     private String  name;
     private  int imageId;
     public Animal(String name,int imageId){
@@ -30,7 +30,7 @@ AnimalAdapter.java
 
 
 
-    public class AnimalAdapter extends ArrayAdapter<Animal> {
+        public class AnimalAdapter extends ArrayAdapter<Animal> {
          private  int resourceId;
         public  AnimalAdapter(Context context,
                           int textViewResourceId,
